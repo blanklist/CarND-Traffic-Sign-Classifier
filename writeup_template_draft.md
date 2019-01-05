@@ -36,7 +36,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/blanklist/CarND-Traffic-Sign-Classifier/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -55,7 +55,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It outputs an image from each image class. This confirms the sort of images which can be expected among the data set.
 
-![data visualization image][https://github.com/blanklist/CarND-Traffic-Sign-Classifier/blob/master/data_visualization.png]
+![data visualization image](https://github.com/blanklist/CarND-Traffic-Sign-Classifier/blob/master/data_visualization.png)
 
 ### Design and Test a Model Architecture
 
@@ -65,7 +65,7 @@ As a first step, I decided to convert the images to grayscale because the color 
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![rgb to gray][https://github.com/blanklist/CarND-Traffic-Sign-Classifier/blob/master/rbg_to_gray.png]
+![rgb to gray](https://github.com/blanklist/CarND-Traffic-Sign-Classifier/blob/master/rbg_to_gray.png)
 
 As a last step, I normalized the image data because this helps the image's data distribution remain consistent across the data. Convergence occurs faster while training the network.
 
@@ -73,7 +73,7 @@ As a last step, I normalized the image data because this helps the image's data 
 
 My final model was a slight variation on LeNet. That variation had to do with implementation so, the layers remain the same:
 
-![LeNet diagram][https://github.com/blanklist/CarND-Traffic-Sign-Classifier/blob/master/mylenet.png]
+![LeNet diagram](https://github.com/blanklist/CarND-Traffic-Sign-Classifier/blob/master/mylenet.png)
 (image found here: deeplearning.net/tutorial/lenet.html)
 
 | Layer         		|     Description	        					| 
@@ -117,7 +117,7 @@ As this was my first exposure to convolutional neural networks, my initial conce
 
 Here are five German traffic signs that I found on the web:
 
-![five images][https://github.com/blanklist/CarND-Traffic-Sign-Classifier/blob/master/five_images.png]
+![five images](https://github.com/blanklist/CarND-Traffic-Sign-Classifier/blob/master/five_images.png)
 
 The first and second images might be difficult to classify because of the amount of blur making the lines and reultant shapes or numbers indistinct. The third image is very clear and simplistic. The fourth and fifth images have clarity though have many features inside of their respective circles and behind the diagonal line.
 
