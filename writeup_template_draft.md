@@ -93,14 +93,17 @@ My final model was a slight variation on LeNet. That variation had to do with im
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an Adam optimizer. Batch size was set to 200 images and the epochs were set to 40. The learning rate was set to 0.005.
+To train the model, I used an Adam optimizer. 
+Batch size was set to 200 images. 
+Epochs were set to 20. 
+The learning rate was set to 0.006.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of 
-* validation set accuracy of 94.3% 
-* test set accuracy of 92.2%
+* training set accuracy of 99.1%
+* validation set accuracy of 93.5% 
+* test set accuracy of 90.8%
 
 If a well known architecture was chosen:
 * What architecture was chosen?
@@ -134,65 +137,65 @@ Here are the results of the prediction:
 | End of speed limit (80km/h)	| End of speed limit (80km/h)      							|
 
 
-The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 92%.
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 91%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 31st cell of the Ipython notebook.
 
-For the first image, the model is marginally sure that this is a 100 km/h sign (probability of 0.42), and the image does contain a 100 km/h sign. The top five soft max probabilities were
+For the first image, the model is nearly sure that this is a 100 km/h sign (probability of 0.99), and the image does contain a 100 km/h sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .42         			| Speed limit (100km/h)   									| 
-| .1     				| Speed limit (30km/h) 										|
-| .09					| Speed limit (120km/h)											|
-| .05	      			| Speed limit (80km/h)					 				|
-| .04				    | Roundabout mandatory      							|
+| .99         			| Speed limit (100km/h)   									| 
+| .00     				| Speed limit (30km/h) 										|
+| .00					| Speed limit (120km/h)											|
+| .00	      			| Speed limit (80km/h)					 				|
+| .00				    | Roundabout mandatory      							|
 
 
-For the second image, the model is marginally sure that this is a no passing for [trucks] sign (probability of 0.4), and the image does contain a no passing for [trucks] sign.  The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .4         			| no passing for [trucks]   									| 
-| .175     				| Slippery road 										|
-| .174					| No passing											|
-| .095	      			| Speed limit (60km/h)					 				|
-| .093				    | Speed limit (100km/h)      							|
-
-
-For the third image, the model is unsure that this is a end of all speed and passing limits sign (probability of 0.31), and the image does contain a End of all speed and passing limits sign. The second most probable sign, at 0.21, was End of no passing which is very similar but the line is horizontally oriented as opposed to diagnoally oriented.  The top five soft max probabilities were
+For the second image, the model is completely sure that this is a no passing for [trucks] sign (probability of 1), and the image does contain a no passing for [trucks] sign.  The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .31         			| End of all speed and passing limits   									| 
-| .21     				| End of no passing 										|
-| .13					| End of speed limit (80km/h)											|
-| .09	      			| Keep right					 				|
-| .07				    | Dangerous curve to the right      							|
+| 1.0         			| no passing for [trucks]   									| 
+| .00     				| Slippery road 										|
+| .00					| No passing											|
+| .00	      			| Speed limit (60km/h)					 				|
+| .00				    | Speed limit (100km/h)      							|
 
 
-For the fourth image, the model is relatively sure that this is a End of no passing by [trucks] sign (probability of 0.53), and the image does contain a End of no passing by [trucks] sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .53         			| End of no passing by [trucks]   									| 
-| .24     				| End of speed limit (80km/h) 										|
-| .15					| Speed limit (30km/h)											|
-| .11	      			| End of no passing					 				|
-| .1				    | Speed limit (100km/h)      							|
-
-
-For the fifth image, the model is marginally sure that this is a End of speed limit (80km/h) sign (probability of 0.39), and the image does contain a End of speed limit (80km/h) sign. The top five soft max probabilities were
+For the third image, the model is completely sure that this is a end of all speed and passing limits sign (probability of 1.0), and the image does contain a End of all speed and passing limits sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .39         			| End of speed limit (80km/h)   									| 
-| .19     				| End of no passing by [trucks] 										|
-| .14					| End of no passing											|
-| .13	      			| End of all speed and passing limits					 				|
-| .12				    | Speed limit (80km/h)      							|
+| 1.0         			| End of all speed and passing limits   									| 
+| .00     				| End of no passing 										|
+| .00					| End of speed limit (80km/h)											|
+| .00	      			| Keep right					 				|
+| .00				    | Dangerous curve to the right      							|
+
+
+For the fourth image, the model is nearly sure that this is a End of no passing by [trucks] sign (probability of 0.99), and the image does contain a End of no passing by [trucks] sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .99         			| End of no passing by [trucks]   									| 
+| .00     				| End of speed limit (80km/h) 										|
+| .00					| Speed limit (30km/h)											|
+| .00	      			| End of no passing					 				|
+| .00			    | Speed limit (100km/h)      							|
+
+
+For the fifth image, the model is nearly sure that this is a End of speed limit (80km/h) sign (probability of 0.99), and the image does contain a End of speed limit (80km/h) sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .99         			| End of speed limit (80km/h)   									| 
+| .00     				| End of no passing by [trucks] 										|
+| .00					| End of no passing											|
+| .00	      			| End of all speed and passing limits					 				|
+| .00				    | Speed limit (80km/h)      							|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
